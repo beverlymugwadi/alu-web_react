@@ -1,0 +1,17 @@
+header {
+  display: block;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header img {
+  height: 50px;
+  margin-top: 0.5rem;
+}

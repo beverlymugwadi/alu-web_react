@@ -1,0 +1,11 @@
+#logo {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.text-red {
+  color: red;
+  font-weight: bold;
+  text-align: right;
+}
