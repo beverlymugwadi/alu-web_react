@@ -4,7 +4,7 @@
   "description": "Webpack with CSS and image loaders",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",

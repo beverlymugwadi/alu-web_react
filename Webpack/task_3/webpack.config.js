@@ -4,9 +4,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    header: './js/modules/header.js',
-    body: './js/modules/body.js',
-    footer: './js/modules/footer.js'
+    header: './modules/header/header.js',
+    body: './modules/body/body.js',
+    footer: './modules/footer/footer.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -16,7 +16,12 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     port: 8564,
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: './public'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   plugins: [
     new CleanWebpackPlugin(),

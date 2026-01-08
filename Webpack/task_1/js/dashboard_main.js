@@ -1,15 +1,19 @@
 import $ from 'jquery';
-import { debounce } from 'lodash';
+import _ from 'lodash';
 
 $('body').append('<div id="logo"></div>');
-$('body').append('<div id="app"></div>');
-$('#app').append('<div>Dashboard data</div>');
+$('body').append('<p>Holberton Dashboard</p>');
+$('body').append('<p>Dashboard data for the students</p>');
 
 let count = 0;
-const debouncedUpdateCounter = debounce(() => {
-  count += 1;
-  $('#app').append(`<p>Total: ${count}</p>`);
-}, 500);
 
-$('body').append('<button id="update_btn">Click here to update counter</button>');
-$('#update_btn').on('click', debouncedUpdateCounter);
+function updateCounter() {
+  count += 1;
+  $('#count').text(`${count} clicks on the button`);
+}
+
+$('body').append('<button>Click here to get started</button>');
+$('body').append('<p id="count"></p>');
+$('body').append('<p>Copyright - Holberton School</p>');
+
+$('button').on('click', _.debounce(updateCounter, 500));
