@@ -8,6 +8,5 @@ try {
   global.mount = Enzyme.mount;
 } catch (e) {
   // Enzyme or adapter may not be compatible; swallow error to keep tests running
-  // eslint-disable-next-line no-console
-  console.error('setupTests: Enzyme configuration skipped:', e && e.message ? e.message : e);
+  // keep silent if Enzyme is not available or incompatible
 }

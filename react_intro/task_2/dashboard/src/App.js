@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './holberton-logo.svg';
+import logo from './assets/holberton-logo.jpg';
 import './App.css';
 import { getFullYear, getFooterCopy } from './utils';
 
