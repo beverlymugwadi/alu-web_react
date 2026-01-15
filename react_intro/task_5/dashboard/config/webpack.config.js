@@ -27,10 +27,24 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[hash][ext][query]'
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash][ext][query]'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: { progressive: true, quality: 65 },
+              optipng: { enabled: true },
+              pngquant: { quality: [0.65, 0.9], speed: 4 },
+              gifsicle: { interlaced: false },
+              webp: { quality: 75 }
+            }
+          }
+        ]
       }
     ]
   },
