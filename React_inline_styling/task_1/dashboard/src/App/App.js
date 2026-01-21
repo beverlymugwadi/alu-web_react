@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
   app: {
     fontFamily: 'Arial, sans-serif'
   },
-  appBody: {
+  body: {
     padding: '20px',
     minHeight: '70vh'
   },
-  appFooter: {
+  footer: {
     borderTop: '2px solid #e0e0e0',
     padding: '20px',
     marginTop: '20px',
@@ -53,7 +53,7 @@ class App extends React.Component {
         <Notifications />
         <div className={css(styles.app)}>
           <Header />
-          <div className={css(styles.appBody)}>
+          <div className={css(styles.body)}>
             <BodySectionWithMarginBottom title="Course list">
               <CourseList />
             </BodySectionWithMarginBottom>
@@ -68,7 +68,7 @@ class App extends React.Component {
               </p>
             </BodySection>
           </div>
-          <div className={css(styles.appFooter)}>
+          <div className={css(styles.footer)}>
             <Footer />
           </div>
         </div>
