@@ -1,0 +1,12 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.App-body {
+  padding: 2rem;
+}
+
+.App-footer {
+  margin-top: 2rem;
+}

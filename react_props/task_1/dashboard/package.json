@@ -1,0 +1,11 @@
+{
+  "name": "react-props-task1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --watchAll=false",
+    "test-watch": "jest --watch"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

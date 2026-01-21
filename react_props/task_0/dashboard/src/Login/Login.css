@@ -1,0 +1,11 @@
+.Login {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.Login input {
+  display: block;
+  margin: 0.5rem 0 1rem 0;
+}
