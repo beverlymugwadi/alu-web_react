@@ -1,6 +1,12 @@
 # React Components - Learning Path
 
-Progressive React learning project with 5 tasks covering class components, lifecycle methods, event handling, composition, HOCs, and performance optimization.
+Progressive React learning project with 5 tasks covering class components, lifecycle methods, event handling, composition, HOCs, and performance optimization. This README applies only to the React Components track (tasks 0-5) in this folder.
+
+## Prerequisites
+
+- Node.js 16+ and npm installed
+- Recommended: use `nvm` to match the Node version per task
+- Run `npm install` inside the specific `task_X/dashboard` you are working on
 
 ## Quick Start
 
@@ -107,7 +113,6 @@ shouldComponentUpdate(nextProps) {
 - **Jest** 29.0.0
 - **Enzyme** 3.10.0
 - **Babel** 7.x
-- **Vite** (task_2+)
 
 ## Testing
 
