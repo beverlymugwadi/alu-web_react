@@ -44,10 +44,11 @@ class App extends React.Component {
   }
 
   render() {
+    const { displayDrawer } = this.state;
     return (
       <>
         <Notifications 
-          displayDrawer={this.state.displayDrawer}
+          displayDrawer={displayDrawer}
           handleDisplayDrawer={this.handleDisplayDrawer}
           handleHideDrawer={this.handleHideDrawer}
         />

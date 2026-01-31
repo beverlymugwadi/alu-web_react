@@ -75,29 +75,26 @@ describe('App component', () => {
 
   it('updates displayDrawer to true after calling handleDisplayDrawer', () => {
     const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
     
-    instance.handleDisplayDrawer();
+    wrapper.instance().handleDisplayDrawer();
     
-    expect(instance.state.displayDrawer).toBe(true);
+    expect(wrapper.state('displayDrawer')).toBe(true);
   });
 
   it('updates displayDrawer to false after calling handleHideDrawer', () => {
     const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
     
-    instance.setState({ displayDrawer: true });
+    wrapper.setState({ displayDrawer: true });
     
-    instance.handleHideDrawer();
+    wrapper.instance().handleHideDrawer();
     
-    expect(instance.state.displayDrawer).toBe(false);
+    expect(wrapper.state('displayDrawer')).toBe(false);
   });
 
   it('passes displayDrawer state to Notifications component', () => {
     const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
     
-    instance.setState({ displayDrawer: true });
+    wrapper.instance().handleDisplayDrawer();
     wrapper.update();
     
     const notificationsComponent = wrapper.find(Notifications);
@@ -106,10 +103,9 @@ describe('App component', () => {
 
   it('passes handleDisplayDrawer and handleHideDrawer to Notifications component', () => {
     const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
     
     const notificationsComponent = wrapper.find(Notifications);
-    expect(notificationsComponent.prop('handleDisplayDrawer')).toBe(instance.handleDisplayDrawer);
-    expect(notificationsComponent.prop('handleHideDrawer')).toBe(instance.handleHideDrawer);
+    expect(notificationsComponent.prop('handleDisplayDrawer')).toBe(wrapper.instance().handleDisplayDrawer);
+    expect(notificationsComponent.prop('handleHideDrawer')).toBe(wrapper.instance().handleHideDrawer);
   });
 });
