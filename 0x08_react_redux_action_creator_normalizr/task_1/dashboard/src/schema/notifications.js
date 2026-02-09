@@ -1,0 +1,33 @@
+import { normalize, schema } from 'normalizr';
+import * as notificationsData from '../../notifications.json';
+
+// Define user entity
+const user = new schema.Entity('users');
+
+// Define message entity with guid as idAttribute
+const message = new schema.Entity('messages', {}, {
+  idAttribute: 'guid'
+});
+
+// Define notification entity
+const notification = new schema.Entity('notifications', {
+  author: user,
+  context: message
+});
+
+// Normalize the notifications data
+const normalizedData = normalize(notificationsData.default, [notification]);
+
+/**
+ * Get all notification contexts for a specific user
+ * @param {string} userId - The user ID to filter notifications by
+ * @returns {Array} Array of context objects for the user's notifications
+ */
+export function getAllNotificationsByUser(userId) {
+  return notificationsData.default
+    .filter((notif) => notif.author.id === userId)
+    .map((notif) => notif.context);
+}
+
+export { normalizedData };
+
