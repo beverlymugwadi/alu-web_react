@@ -1,5 +1,7 @@
 # Exam Management
 
+Justify center
+
 This documentation covers the utility functions used for managing the school, specifically focusing on code frame generation and token highlighting.
 
 ## Utility Module: isColorSupported
