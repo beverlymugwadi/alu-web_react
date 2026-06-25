@@ -1,0 +1,17 @@
+[
+  {
+    "docPath": "docs/0x08_react_redux_action_creator_normalizr/task_0/dashboard/node_modules/@babel/compat-data/corejs3-shipped-proposals.md",
+    "sources": [
+      {
+        "repoFullName": "beverlymugwadi/alu-web_react",
+        "path": "0x08_react_redux_action_creator_normalizr/task_0/dashboard/node_modules/@babel/compat-data/corejs3-shipped-proposals.js",
+        "branch": "main",
+        "commitSha": "7909b8c46d3717def2168c9a1e8cc6a068b29541"
+      }
+    ],
+    "generatedAt": "2026-06-25T15:48:56.540Z",
+    "generator": "ADGVC",
+    "authorLogin": "beverlymugwadi",
+    "version": 2
+  }
+]
